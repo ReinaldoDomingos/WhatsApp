@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <link rel="stylesheet" type="text/css" href="assets/libs/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/libs/bootstrap/4.3.1/css/bootstrap.css">
+    <script type="text/javascript" src="assets/libs/jquery/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="assets/libs/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    rel="stylesheet">
+    <style type="text/css">
+        #app{
+            color: white;
+
+        }        
+        .carousel-indicators{            
+            position: unset;
+            width: -webkit-fill-available;
+            margin-left: 0;
+            margin-right: 0;
+            margin: 0;
+        }
+        .carousel-item{
+            height: 500px;
+        }
+        .carousel-indicators .nav-item{
+            text-indent: initial !important;
+            box-sizing: content-box; 
+            -ms-flex: 0 1 auto;
+            background-color: transparent; 
+            height: auto !important;
+        }
+        .carousel-inner{
+            color: gray;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+
+     <nav class="navbar navbar-dark bg-green">    
+        <a class="navbar-brand" href="#">Titulo</a>
+        <span class="items">
+            <i class="material-icons">search</i>
+            <i class="material-icons">more_vert</i>
+        </span>
+    </nav>
+
+
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <div class="nav nav-pills bg-green">            
+          <ol class="carousel-indicators">
+            <li class="nav-item bt-item" data-target="#carouselExampleIndicators" data-slide-to="0">
+             <a class="nav-link" href="#camera"><i class="material-icons">camera_alt</i></a>
+             <div class="item-selected"></div>
+         </li>
+         <li class="nav-item active" data-target="#carouselExampleIndicators" data-slide-to="1">
+            <span class="nav-link">Conversas</span>
+            <div class="item-selected"></div>
+        </li>
+        <li class="nav-item" data-target="#carouselExampleIndicators" data-slide-to="2">
+            <span class="nav-link">Status</span>
+            <div class="item-selected"></div>
+        </li>
+        <li class="nav-item" data-target="#carouselExampleIndicators" data-slide-to="3">
+            <span class="nav-link">Chamadas</span>
+            <div class="item-selected"></div>
+        </li>
+    </ol>
+</div>
+<div class="carousel-inner">
+    <div class="carousel-item active">
+        0
+        000000000000000000
+        000000000000
+        0
+        0
+
+        00000000000000
+        
+    </div>
+    <div class="carousel-item">
+       Aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+       aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+       aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+
+
+       aaaaaaaaaaaaaa
+       <div class="item-selected"></div>
+   </div>
+   <div class="carousel-item">
+      Bbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+      bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+      bbbbbbbbbbbbb
+
+      bbbbbbbbbbbbbbbbbbbbbbbb
+      <div class="item-selected"></div>
+  </div>
+  <div class="carousel-item">
+      Cccccccccccccccccccccc
+      cccccccccccccccccccccccc
+      ccccccccccccccccccccccccccc
+      cccccccccccccccccc
+
+      ccccccccccccccc 
+      <div class="item-selected"></div>
+  </div>
+</div>
+</div>
+
+</div>
+<script type="text/javascript" src="cordova.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
+<script type="text/javascript">
+    $(function(){
+        $('.carousel').carousel({interval: 0})
+        $('.carousel').carousel(1)
+        $('.carousel').carousel('pause')
+    })
+    var teste 
+    function tab(el){
+        var id = el.children[0].href
+        $('.ativo').removeClass('ativo')
+        el.classList.add('ativo')
+        $(".tab-pane").removeClass('active')
+        if(id.indexOf('camera')!=-1){
+            $("#camera").addClass('active')
+        }
+        else if(id.indexOf('status')!=-1){
+            $("#status").addClass('active')
+        }
+        else if(id.indexOf('calls')!=-1){
+            $("#calls").addClass('active')
+        }
+        else{
+            $("#messages").addClass('active')
+        }
+    }
+    // tab()
+</script>
+</body>
+</html>

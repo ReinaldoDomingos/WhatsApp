@@ -1,0 +1,45 @@
+
+.items i, .nav-item a{
+	color: white !important;
+}
+.items i{
+	margin: 0.5rem;
+}
+.items{
+	position: absolute;
+	right: 0;
+}
+.nav-link a,.nav-link span{
+	padding: 0.5rem !important;
+	font-variant: all-petite-caps;
+	font-size: large;
+}
+.material-icons{
+	font-variant: none;
+}
+.bg-green{
+	background: green;
+}
+.active .item-selected{
+	background: white;
+	height: 0.1rem;
+}
+
+.ativo{
+	opacity: 1 !important;
+}
+
+.nav-item{
+	width: 30% !important;
+	border-bottom: 0 !important;
+}
+.bt-item{
+	width: 10% !important;
+	padding: 0;
+}
+.bt-item .nav-link{
+	padding: 0;
+	padding-left: 0.3rem;
+	padding-right: 0.1rem;
+	padding-top: 0.6rem;
+}
