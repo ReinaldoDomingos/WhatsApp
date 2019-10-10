@@ -12,6 +12,9 @@
 .fechar{
 	float: right;
 }
+.voltar{
+	float: left;
+}
 .fechar i{
 	color: black !important;
 }
@@ -39,7 +42,7 @@ body{
 	position: absolute;
 	top: 0;
 	left: 0;
-	height: 2.5rem;
+	height: 3rem;
 }
 [type="search"]{
 	height: -webkit-fill-available;

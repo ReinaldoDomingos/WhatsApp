@@ -25,10 +25,10 @@
   </nav>
 
   <div class="pesquisa hide">
-    <span>
+    <span class="voltar">
       <i class="material-icons"   onclick="fecharPesquisa()">arrow_back</i>
     </span>
-    <input id="txtPesquisa" type="search" placeholder="Pesquisar...">
+    <input id="txtPesquisa" type="search" placeholder="Pesquisar..." onkeyup="toggleX()">
     <span class="fechar">
       <i class="material-icons"  onclick="limparPesquisa()">close</i>
     </span>
@@ -101,15 +101,26 @@
 <script type="text/javascript" src="js/index.js"></script>
 <script type="text/javascript">
   $(function(){
+    $('.fechar').hide()
     $('.carousel').carousel({interval: 0})
     $('.carousel').carousel(1)
     $('.carousel').carousel('pause')
   })
 
+  function toggleX(){
+    if(txtPesquisa.value){
+      $('.fechar').show()
+    }else{
+      $('.fechar').hide()
+    }
+  }  
+
   function limparPesquisa(){
     txtPesquisa.value = ''
+    console.log("ij")
+    $('.fechar').hide()
   }
-  
+
   function fecharPesquisa(){
     limparPesquisa()
     $('.pesquisa').addClass('hide')
