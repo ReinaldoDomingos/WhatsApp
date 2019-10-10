@@ -1,4 +1,80 @@
+/*Tirar seleção de texto*/
+*{	
+	-webkit-touch-callout: none;  /* iPhone OS, Safari */
+	-webkit-user-select: none;    /* Chrome, Safari 3 */
+	-khtml-user-select: none;     /* Safari 2 */
+	-moz-user-select: none;       /* Firefox */
+	-ms-user-select: none;        /* IE10+ */
+	user-select: none;            /* Possível implementação no futuro */
+}
 
+
+.fechar{
+	float: right;
+}
+.fechar i{
+	color: black !important;
+}
+.pesquisa span i{
+	color: green;
+	margin-top: 0.5rem;
+}
+
+/*remove o botão x do input search*/
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+	display: none;
+}
+body{
+	background-color: #f7f7f7;
+}
+.hide{
+	display: none;
+}
+.pesquisa {
+	width: -webkit-fill-available;
+	background-color: white;
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 2.5rem;
+}
+[type="search"]{
+	height: -webkit-fill-available;
+	vertical-align: bottom;
+	border: none;
+	width: 85%;
+	/*remove retangulo azul quando button selecionado*/
+	outline: 0px auto -webkit-focus-ring-color !important;
+	outline-offset: 0px !important;
+}
+#app{
+	color: white;
+}        
+.carousel-indicators{            
+	position: unset;
+	position: unset;
+	width: -webkit-fill-available;
+	margin-left: 0;
+	margin-right: 0;
+	margin: 0;
+}
+.carousel-item{
+	height: 500px;
+}
+.carousel-indicators .nav-item{
+	text-align: center;
+	text-indent: initial !important;
+	box-sizing: content-box; 
+	-ms-flex: 0 1 auto;
+	background-color: transparent; 
+	height: auto !important;
+}
+.carousel-inner{
+	color: gray;
+}
 .items i, .nav-item a{
 	color: white !important;
 }
